@@ -1,0 +1,39 @@
+@import '../../../style/variables.scss';
+
+.profile{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+    &__bell{
+        display: flex;
+        cursor: pointer;
+        p {
+            position: relative;
+            right: 7px;
+            bottom: 8px;
+            background-color: #FF6760;
+            border: 2px solid #FFFFFF;
+            border-radius: 100%;
+            width: 20px;
+            height: 20px;
+            font-weight: 700;
+            font-size: 10px;
+            line-height: 12px;
+            text-align: center;
+            letter-spacing: 0.2px;
+            color: #FFFFFF;
+            z-index: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    &__icon{
+        img{
+            border: 3px solid $divider;
+            border-radius: 100%;
+        }
+        cursor: pointer;
+    }
+}

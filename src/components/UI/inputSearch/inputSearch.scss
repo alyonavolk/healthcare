@@ -1,0 +1,29 @@
+@import '../../../style/variables.scss';
+
+.inputSearch{
+    max-width: 300px;
+    input {
+        width: 100%;
+        padding: 10px 10px 10px 45px;
+        @extend %small1;
+        color: $black-color;
+        background-color: $white-color;
+        border-radius: 100px;
+        border: none;
+
+        background-image: url(../../../resources/img/loop.svg);
+        background-repeat: no-repeat;
+        background-image: 100%;
+        background-position: 18px 50%;
+        &::placeholder{
+            color:$gray;
+        }
+        &:focus, &:hover{
+            outline: none;
+            box-shadow: $shadow;
+        }
+        &:focus{
+            outline: 0.5px solid $sky-light;
+        }
+    }
+}

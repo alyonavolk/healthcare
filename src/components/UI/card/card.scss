@@ -1,0 +1,22 @@
+@import '../../../style/variables.scss';
+
+.card{
+    background-color: $white-color;
+    box-shadow: $shadow;
+    border-radius: $border;
+    max-width: 255px;
+    padding: 20px 24px;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    &__title{
+        @extend %subtitle2;
+        color: $black-color;
+    }
+    &__volum{
+        @extend %h6;
+        color: $main-color;
+    }
+}
