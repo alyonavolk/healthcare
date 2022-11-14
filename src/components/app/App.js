@@ -8,11 +8,18 @@ import AsideItem from '../UI/asideItem/asideItem';
 
 function App() {
   return (
-    <div className="App">
-      <Card icon={bag} title='dfdsf' volum='dsdad'/>
-      <Search />
-      <AsideItem>jkfsjf</AsideItem>
-    </div>
+    <Router>
+      <div className="App">
+        <Switch>
+          <Route exact path='/'>
+            <Card icon={bag} title='dfdsf' volum='dsdad'/>
+            <Search />
+            <AsideItem font='appointments' link='/'>jkfsjf</AsideItem>
+            <AsideItem font='appointments' link='/kdsd'>jkfsjf</AsideItem>
+          </Route>
+        </Switch>
+      </div>
+    </Router>
   );
 }
 

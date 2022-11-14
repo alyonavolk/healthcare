@@ -1,0 +1,12 @@
+@import '../../../style/variables.scss';
+
+.asideItem{
+    @extend %subtitle2;
+    color: $gray-dark;
+    &:hover {
+        color: $main-color;
+    }
+    &_active{
+        color: $main-color;
+    }
+}
