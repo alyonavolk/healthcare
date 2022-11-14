@@ -5,6 +5,7 @@ import Search from '../search/search';
 import client from '../../resources/img/client.svg';
 import bag from '../../resources/img/bag.svg';
 import AsideItem from '../UI/asideItem/asideItem';
+import Table from '../table/table';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
             <Search />
             <AsideItem font='appointments' link='/'>jkfsjf</AsideItem>
             <AsideItem font='appointments' link='/kdsd'>jkfsjf</AsideItem>
+            <Table />
           </Route>
         </Switch>
       </div>
