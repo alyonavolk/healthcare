@@ -1,0 +1,15 @@
+@import '../../style/variables.scss';
+
+.dashboard{
+    max-width: 1110px;
+    &__chart{
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        &_down{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+    }
+}

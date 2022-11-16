@@ -1,0 +1,14 @@
+@import '../../../style/variables.scss';
+
+.chart__survey{
+    cursor: pointer;
+    max-width: 100%;
+    max-height: 380px;
+    padding: 20px;
+    background: $white-color;
+    box-shadow: 0px 12px 26px rgba(16, 30, 115, 0.06);
+    border-radius: 8px;
+    &__marker{
+        border-radius: 0;
+    }
+}
