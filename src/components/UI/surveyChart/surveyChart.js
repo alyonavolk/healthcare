@@ -90,7 +90,7 @@ class SurveyChart extends React.Component {
     render() {
       return (
         <div id="chart" className='chart__survey'>
-            <Chart options={this.state.options} series={this.state.series} height={350} width={1050} />
+            <Chart options={this.state.options} series={this.state.series} height={350} width='100%' />
         </div>
       );
     }

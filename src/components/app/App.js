@@ -1,26 +1,31 @@
 import './App.scss';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Card from '../UI/card/card';
 import Search from '../search/search';
-import bag from '../../resources/img/bag.svg';
-import AsideItem from '../UI/asideItem/asideItem';
-import Table from '../table/table';
 import Dashboard from '../Dashboard/Dashboard';
+import AsideMenu from '../asideMenu/asideMenu';
+import Appointments from '../Appointments/appointments';
 
 function App() {
 
   return (
     <Router>
-      <div className="App">
-        <Switch>
-          <Route exact path='/'>
-            <Card icon={bag} title='dfdsf' volum='dsdad'/>
+      <div className="app">
+            <AsideMenu />
+          <div className='app__content'>
             <Search />
-            <AsideItem font='appointments' link='/'>jkfsjf</AsideItem>
-            <AsideItem font='appointments' link='/kdsd'>jkfsjf</AsideItem>
-            <Dashboard />
-          </Route>
-        </Switch>
+            <Switch>
+              <Route exact path='/'>
+                <div className='app__dashboard'>
+                  <Dashboard />
+                </div>
+              </Route>
+              <Route exact path='/appointments'>
+                <div className='app__appointments'>
+                  <Appointments />
+                </div>
+              </Route>
+            </Switch>
+          </div>
       </div>
     </Router>
   );

@@ -93,7 +93,7 @@ class MoneyChart extends React.Component {
     render() {
       return (
         <div id="chart" className='chart__money'>
-            <Chart options={this.state.options} series={this.state.series} type="line" height={270} width={500} />
+            <Chart options={this.state.options} series={this.state.series} type="line" height={270} width='100%'/>
         </div>
       );
     }

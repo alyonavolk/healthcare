@@ -5,9 +5,7 @@ import '../../../style/iconsFont.scss';
 
 const AsideItem = ({children, link, font}) => {
     return (
-        <div className='asideItem'>
-            <NavLink className={`icon-${font}`} activeClassName='asideItem_active' to={link}>{children}</NavLink>
-        </div>
+        <NavLink className={`asideItem icon-${font}`} exact activeClassName='asideItem_active' to={link}>{children}</NavLink>
     );
 };
 

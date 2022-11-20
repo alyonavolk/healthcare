@@ -1,0 +1,8 @@
+@import '../../style/variables.scss';
+
+.appointments{
+    margin-top: 30px;
+    &__title{
+        @extend %h2;
+    }
+}

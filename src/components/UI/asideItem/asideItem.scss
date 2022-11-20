@@ -1,6 +1,8 @@
 @import '../../../style/variables.scss';
 
 .asideItem{
+    max-width: 100%;
+    max-height: 100%;
     @extend %subtitle2;
     color: $gray-dark;
     &:hover {

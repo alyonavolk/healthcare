@@ -1,0 +1,113 @@
+@import '../../style/variables.scss';
+
+:root{
+    --landscape-width: 20;//посмотреть где используются проценты, и возможно добавить переменную и заменить в коде
+    --header-height: 3.5rem;
+    --secs: 0.4s;
+    //--bg-left: rgba(148, 255, 201, 0.686);
+    --bg-main: #F6F8FB;
+}
+
+#aside{
+    display: flex;
+    background-color: #FFFFFF;
+    box-shadow: 4px 0px 16px rgba(16, 30, 115, 0.08);
+    .header{
+        position: relative;
+        height: 50px;
+        .title{
+            position: absolute;
+            left: 0;
+            right: 0;
+            color: $main-color;
+            font-size: 20px;
+            line-height: 34px;
+            margin-left: 20px;
+            margin-top: 24px;
+            width: 40px;
+            left: 55px;
+        }
+    }
+}
+
+
+#left{
+    transition: width 0.4s;
+    width: 0;
+    z-index: 5;
+    &.open{
+        width: 250px;
+    }
+    @media (max-width: 768px) {
+        &.open{
+            width: 200px;
+        }
+    }
+}
+
+
+.menu{
+    &__img{
+        position: fixed;
+        z-index: 10;
+        width: 56px;
+        height: 56px;
+        line-height: 56px;
+        font-size: 56px;
+        text-align: center;
+        user-select: none;
+        cursor: pointer;
+        img{
+            width: 45px;
+            height: 45px;
+            margin-top: 20px;
+            margin-left: 20px;
+        }
+    }
+    &__title{
+        @extend %body2;
+        color: $gray;
+        padding: 0 25px;
+    }
+    &__content{
+        margin-top: 30px;
+        overflow: auto;
+        box-sizing: border-box;
+        min-width: 256px;
+    }
+    &__items{
+        display: flex;
+        flex-direction: column;
+        li{
+            display: flex;
+            align-items: center;
+            width: 240px;
+            height: 45px;
+            padding: 0 25px;
+            &:last-child {
+                margin-top: 5px;
+                border-top: 1px solid $divider;
+            }
+        }
+    }
+
+    
+    transition: transform 0.4s;
+    @media(orientation: portrait){
+        width: 80vw;
+    }
+    @media(orientation: landscape){
+        width: calc(1vw * var(--landscape-width));
+    }
+    &.closed{
+        transform: translateX(-150%);
+    }
+    @media (max-width: 768px) {
+        &__items{
+            li{
+                width: 180px;
+                padding: 0 15px;
+            }
+        }
+    }
+}

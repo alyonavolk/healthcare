@@ -2,5 +2,15 @@
 
 .app{
   background-color: $background;
-
+  display: flex;
+  gap: 100px;
+  &__content{
+    padding: 20px 0;
+  }
+  @media (max-width: 768px) {
+    gap: 80px;
+    &__content{
+      max-width: 500px;
+    }
+}
 }
