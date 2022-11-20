@@ -1,6 +1,7 @@
 @import '../../style/variables.scss';
 
 .app{
+  min-height: 900px;
   background-color: $background;
   display: flex;
   gap: 100px;

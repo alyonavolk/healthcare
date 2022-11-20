@@ -5,7 +5,7 @@ import trash from '../../../resources/img/trash.svg';
 
 const ClientTable = (props) => {
     return (
-        <tr className={`clientTable ${props.border}`}>
+        <tr className='clientTable'>
             <td>
                 <img src={props.foto} alt='' />
                 <p>{props.name}</p>

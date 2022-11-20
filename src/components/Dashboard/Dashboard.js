@@ -37,7 +37,7 @@ const Dashboard = () => {
                 </div>
             </div>
             <div className='dashboard__table'>
-
+                <Table title='Appointment Activity'/>
             </div>
         </div>
     );

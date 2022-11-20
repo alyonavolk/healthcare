@@ -1,0 +1,31 @@
+@import '../../style/variables.scss';
+
+.table{
+    max-width: 1060px;
+    background-color: $white-color;
+    box-shadow: 0px 12px 26px rgba(16, 30, 115, 0.06);
+    border-radius: 8px;
+    &__title{
+        padding: 20px;
+        @extend %h5;
+        color: $black-color;
+    }
+    table {
+        border-collapse: collapse;
+        thead{
+            tr{
+                @extend %subtitle2;
+                text-align: left;
+                color: black;
+                background-color: $divider;
+                filter: opacity(25%);
+                th{
+                    padding: 10px 0;
+                    &:first-child{
+                        padding-left: 24px;
+                    }
+                }
+            }
+        }
+    }
+}
