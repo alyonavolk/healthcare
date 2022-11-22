@@ -1,0 +1,21 @@
+@import '../../../style/variables.scss';
+
+.button{
+    width: 32px;
+    height: 32px;
+    @extend %small2;
+    border: 1px solid $divider;
+    cursor: pointer;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $white-color;
+    color: $black-color;
+    &_num{
+        &:hover{
+            background-color: $main-color;
+            color: $white-color;
+        }
+    }
+}

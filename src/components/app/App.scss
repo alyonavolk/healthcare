@@ -11,7 +11,8 @@
   @media (max-width: 768px) {
     gap: 80px;
     &__content{
-      max-width: 500px;
+      margin: 0 auto;
+      max-width: 600px;
     }
 }
 }
