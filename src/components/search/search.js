@@ -10,7 +10,7 @@ const Search = () => {
             <div className='search__input'>
                 <InputSearch />
             </div>
-            <div>
+            <div className='search__profile'>
                 <Profile img={avatar} count='1'/>
             </div>
         </div>

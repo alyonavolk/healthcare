@@ -8,4 +8,12 @@
     &__input {
         width: 300px;
     }
+    
+    @media (max-width: 375px) {
+        flex-direction: column;
+        &__profile{
+            margin-top: 10px;
+            margin-left: 60%;
+        }
+    }
 }

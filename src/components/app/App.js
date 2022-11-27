@@ -4,17 +4,24 @@ import Search from '../search/search';
 import Dashboard from '../Dashboard/Dashboard';
 import AsideMenu from '../asideMenu/asideMenu';
 import Appointments from '../Appointments/appointments';
+import Authorization from '../Authorization/authorization';
 
 function App() {
 
   return (
     <Router>
       <div className="app">
-            <AsideMenu />
+        <Authorization />
+            {/* <AsideMenu />
           <div className='app__content'>
             <Search />
             <Switch>
               <Route exact path='/'>
+                <div className='app__dashboard'>
+                  <Dashboard />
+                </div>
+              </Route>
+              <Route exact path='/dashboard'>
                 <div className='app__dashboard'>
                   <Dashboard />
                 </div>
@@ -25,7 +32,7 @@ function App() {
                 </div>
               </Route>
             </Switch>
-          </div>
+          </div> */}
       </div>
     </Router>
   );
