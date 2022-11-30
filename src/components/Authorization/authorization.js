@@ -5,7 +5,17 @@ import * as Yup from 'yup';
 
 const Authorization = () => {
 
-    const [modal, setModal] = useState();
+    const pass = (val, ps) => {
+        if (val === 'login@a.b' && ps === 'pass'){
+            setModal(false)
+        }
+        else{
+            return(
+                <div className='form_error'>Invalid username or password</div>
+            )
+        }
+    }
+    const [modal, setModal] = useState(true);
     const formik = useFormik({
         initialValues: {
             email: '',
@@ -15,10 +25,11 @@ const Authorization = () => {
             email: Yup.string().email('Invalid email address').required('Email incorrect'),
             password: Yup.string().required('Password incorrect')
         }),
-        onSubmit: values => setModal()
+        onSubmit: values => pass(formik.values.email, formik.values.password)
     })
     return (
-        <form className='form' onSubmit={formik.handleSubmit}>
+        <div className={`form_back ${modal ? null : 'form_close'}`}>
+            <form className='form' onSubmit={formik.handleSubmit}>
             <div className='form__title'>
                 <p>Login</p>
                 <div className='line_heavy' />
@@ -44,8 +55,10 @@ const Authorization = () => {
                 {formik.touched.password && formik.errors.email ? <div className='form_error'>{formik.errors.password}</div> : null}</div>
             </div>
 
+            {/* { formik.values.email !== 'login@a.b' && formik.values.password !== 'pass' && formik.touched.password && formik.touched.email ? <div className='form_error'>Invalid username or password</div> : null } */}
             <button className='form__btn'>Login</button>
         </form>
+        </div>
     );
 };
 

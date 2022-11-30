@@ -12,7 +12,7 @@ function App() {
     <Router>
       <div className="app">
         <Authorization />
-            {/* <AsideMenu />
+            <AsideMenu />
           <div className='app__content'>
             <Search />
             <Switch>
@@ -32,7 +32,7 @@ function App() {
                 </div>
               </Route>
             </Switch>
-          </div> */}
+          </div>
       </div>
     </Router>
   );
