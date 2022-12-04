@@ -7,7 +7,7 @@ import bag from '../../resources/img/bag.svg';
 import human1 from '../../resources/img/human1.svg';
 import human2 from '../../resources/img/human2.svg';
 import bank from '../../resources/img/bank.svg';
-import Table from '../table/table';
+import Table from '../tableDashboard/tableDashboard';
 
 const Dashboard = () => {
     const dataMonth = [45, 77, 35, 62, 43];

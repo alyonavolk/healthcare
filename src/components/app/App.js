@@ -14,15 +14,10 @@ function App() {
         <Authorization />
             <AsideMenu />
           <div className='app__content'>
-            <Search />
             <Switch>
               <Route exact path='/'>
                 <div className='app__dashboard'>
-                  <Dashboard />
-                </div>
-              </Route>
-              <Route exact path='/dashboard'>
-                <div className='app__dashboard'>
+                  <Search />
                   <Dashboard />
                 </div>
               </Route>

@@ -26,6 +26,14 @@
       max-width: 500px;
     }
   }
+  @media (max-width: 425px) {
+    max-width: 425px;
+    gap: 80px;
+    &__content{
+      margin: 0 auto;
+      max-width: 425px;
+    }
+  }
   @media (max-width: 375px) {
     max-width: 375px;
     gap: 80px;

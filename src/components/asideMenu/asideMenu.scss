@@ -24,20 +24,20 @@
     &_active{
         transition: transform 0.4s;
         max-width: 250px;
-        @media (max-width: 768px) {
-            width: 200px;
-        }
+    }
+    @media (max-width: 768px) {
+        width: 200px;
     }
     &_close{
         transition: transform 0.4s;
         transform: translateX(-200%);
-        max-width: 50px;
+        max-width: 70px;
     }
     &__content{
         margin-top: 30px;
         overflow: auto;
         box-sizing: border-box;
-        min-width: 256px;
+        width: 256px;
     }
     &__logo{
         position: absolute;
